@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webcam Stream</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        #stream {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .btn {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>My Camera</h1>
+    <video id="stream" autoplay playsinline></video>
+    <canvas id="captureCanvas" style="display:none;"></canvas>
+    <div>
+        <button class="btn" id="start">Start</button>
+        <button class="btn" id="stop">Stop</button>
+        <button class="btn" id="capture">Capture</button>
+        <button class="btn" id="clear">Clear</button>
+    </div>
+
+    <div>
+        <h3>Camera Parameters</h3>
+        <p>Brightness: <span id="brightnessValue"></span></p>
+        <input type="range" id="brightnessSlider" min="-100" max="100" value="0" step="1">
+        <p>Exposure: <span id="exposureValue"></span></p>
+        <input type="range" id="exposureSlider" min="-10" max="10" value="0">
+        <p>Image Size: <span id="imageSizeValue"></span></p>
+        <input type="range" id="imageSizeSlider" min="1" max="4" value="1">
+        <p>Timestamp: <span id="timestamp"></span></p>
+    </div>
+    <script src="/static/script.js"></script>
+    <div id="capturedImages" style="display: flex; flex-wrap: wrap;"></div>
+</body>
+</html>
