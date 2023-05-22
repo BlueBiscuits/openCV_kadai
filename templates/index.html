@@ -13,40 +13,37 @@
             justify-content: center;
             padding: 20px;
         }
-
-        #stream {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .btn {
-            margin: 5px;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-        }
     </style>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
 </head>
 <body>
-    <h1>My Camera</h1>
-    <video id="stream" autoplay playsinline></video>
-    <canvas id="captureCanvas" style="display:none;"></canvas>
+    
+    <div id="draggable" style="position: absolute; cursor: move;">
+        <h1>Camera 1</h1>
+        <img id="stream" class="resizable">
+    </div>
+    <div id="draggable2" style="position: absolute; cursor: move;">
+        <h1>Camera 2</h1>
+        <img id="stream2" class="resizable">
+    </div>
     <div>
         <button class="btn" id="start">Start</button>
         <button class="btn" id="stop">Stop</button>
         <button class="btn" id="capture">Capture</button>
         <button class="btn" id="clear">Clear</button>
     </div>
-
-    <div>
-        <h3>Camera Parameters</h3>
+    <div style="position: relative;">
+        <h2>Camera Parameters</h2>
         <p>Brightness: <span id="brightnessValue"></span></p>
-        <input type="range" id="brightnessSlider" min="-100" max="100" value="0" step="1">
+        <input type="range" id="brightnessSlider" min="-100" max="100" value="0" step="10">
         <p>Exposure: <span id="exposureValue"></span></p>
-        <input type="range" id="exposureSlider" min="-10" max="10" value="0">
+        <input type="range" id="exposureSlider" min="-50" max="50" value="0" step="10">
         <p>Image Size: <span id="imageSizeValue"></span></p>
-        <input type="range" id="imageSizeSlider" min="1" max="4" value="1">
+        <input type="range" id="imageSizeSlider" min="1" max="3" value="2">
         <p>Timestamp: <span id="timestamp"></span></p>
+
+        <h2> Process Image </h2>
+        <button class="btn" id="gray">Gray Image</button>
     </div>
     <script src="/static/script.js"></script>
     <div id="capturedImages" style="display: flex; flex-wrap: wrap;"></div>
