@@ -1,0 +1,43 @@
+#stream {
+    max-width: 100%;
+    height: auto;
+}
+
+.btn {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.resizable {
+    width: 100%;
+    height: auto;
+}
+
+#draggable {
+    border: 2px solid skyblue;
+    padding: 10px;
+    border-radius: 10px;
+    top: 100px;
+    left: 50px;
+}
+
+#draggable2 {
+    border: 2px solid skyblue;
+    padding: 10px;
+    border-radius: 10px;
+    top: 100px;
+    left: 50px;
+}
+
+h1 {
+    font-family: Arial;
+    color: skyblue;
+    text-align: center;
+}
+
+h2 {
+    font-family: Arial;
+    color: green;
+}
