@@ -107,9 +107,9 @@ def video_feed():
 2. `script.js`で各スライダーのイベントリスナーを作ります。
 
 3. カメラのパラメータを調整すると、バック側が`172.17.0.1 - - [27/Apr/2023 06:00:34] "POST /update_camera HTTP/1.1" 200 -`というresponseを返します。
-![](files/brightness)
-![](files/size)
-![](files/log1)
+![](files/brightness.png)
+![](files/size.png)
+![](files/log1.png)
 
 ### Task 5: Add Image Operation Functionalities
 1. streaming image画像をリアルタイムで操作できるようにするため、マウスダウンイベントリスナーを追加します。
@@ -144,8 +144,8 @@ function makeDraggable(elementId) {
 }
 ```
 * 指定された要素をユーザーがマウスで自由にdraggeして移動することができる
-![](files/draggable1)
-![](files/draggable2)
+![](files/draggable1.png)
+![](files/draggable2.png)
 
 ### Task 6: Simple Image Processing on Captured Images
 1. キャプチャされた画像のカラーからグレーへの変換のため、Gray Imageボタンのエンドポイントとイベントリスナーを追加します。
@@ -158,15 +158,15 @@ cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 ```
 
 Gray Imageボタンを押すと、キャプチャされた画像のカラーからグレーへの変換ができる
-![](files/gray1)
+![](files/gray1.png)
 同じボタンを再度クリックすると、画像処理操作がキャンセルされ、キャプチャされた画像が元のRGB画像として表示されます
-![](files/gray2)
-![](files/log2)
+![](files/gray2.png)
+![](files/log2.png)
 
 
 ### Task 7: Add Another View for Image Data Streaming In Parallel
 
-![](files/twocamera)
+![](files/twocamera.png)
 
 
 ### Task 8: Wrap Up the Program Inside a Docker
